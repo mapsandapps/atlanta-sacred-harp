@@ -1,0 +1,371 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<TITLE> Locations of Georgia Singing Sites</TITLE>
+<META name="description" content="Map of Sacred Harp and other shape note singing locations in Georgia">
+
+<LINK REL="STYLESHEET" HREF="ashstyle.css" TYPE="text/css">
+</head>
+<BODY>
+<!--  -->
+<DIV align="left">
+
+<table border="0">
+  <tbody>
+  <td class="topbox" colspan=3><p align = "right"><img width = 83% src = "pictures/chattahoochee_chambless_dsc00057strip.jpg" alt="Photo by Robert Chambless from his set Chattahoochee Singing August 2, 2014"></p>
+  </td>
+  </tr>
+  <tr>
+  <td valign="top" class="menubox" width="17%">
+	<br>
+	<div id="menu">
+		<ul>
+	    <li class="menu"><a href="index.html">Home</a></li>
+	    <li class="menu"><a href="beginner.html">What to expect</a></li>
+	    <li class="menu"><a href="monthly.html">Upcoming singings and directions</a></li>
+	    <li class="menu"><a href="localgroups.html">Monthly/quarterly "practice" singings</a></li>
+	    <li class="menu"><a href="annual.html">Annual all-day singings</a></li>
+	    <li class="menu"><a href="annual.html">Map</a></li>
+	    <li class="menu"><a href="calendar.php">Dates of Sundays</a></li>
+		</ul>
+	</div>
+	</td>	
+
+    <TD vAlign="middle" width="2%">&nbsp;</TD>
+
+
+    <TD vAlign="top" align="left">
+
+	   <br>
+	   <H1 align = center>Georgia Singings Map</H1>
+	   <br>
+	   <p>The map below shows places where singings are held. Please see our <a href="monthly.html">upcoming singings page</a> for details and directions.</p>
+
+<div id="map" style="width:100%;height:640px"></div>
+
+<script>
+function myMap() {
+  var myCenter = new google.maps.LatLng(32.8892638,-83.3119154);
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {center: myCenter, zoom: 7};
+  var map = new google.maps.Map(mapCanvas, mapOptions); 
+
+  // Custom marker colors according to books used
+  // thank you, http://stackoverflow.com/questions/7095574/google-maps-api-3-custom-marker-color-for-default-dot-marker/7686977#7686977
+  var colorSH91 = "A00000";
+  var colorCB = "0000FF";
+  var colorWB = "E0E0D0";
+  var colorSocH = "8FBC8F";
+  var colorGH = "B0C4F0";
+  var colorCH = "808080";
+
+  var imgSH91 = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + colorSH91,
+    new google.maps.Size(21, 34),
+    new google.maps.Point(0,0),
+    new google.maps.Point(10, 34));
+        
+  var imgCB = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + colorCB,
+    new google.maps.Size(21, 34),
+    new google.maps.Point(0,0),
+    new google.maps.Point(10, 34));
+        
+  var imgWB = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + colorWB,
+    new google.maps.Size(21, 34),
+    new google.maps.Point(0,0),
+    new google.maps.Point(10, 34));
+        
+  var imgSocH = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + colorSocH,
+    new google.maps.Size(21, 34),
+    new google.maps.Point(0,0),
+    new google.maps.Point(10, 34));
+        
+  var imgGH = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + colorGH,
+    new google.maps.Size(21, 34),
+    new google.maps.Point(0,0),
+    new google.maps.Point(10, 34));
+        
+  var imgCH = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + colorCH,
+    new google.maps.Size(21, 34),
+    new google.maps.Point(0,0),
+    new google.maps.Point(10, 34)); 
+
+  // Locations of singings
+
+  var singIla = {
+  pos: {lat: 34.1563562, lng: -83.3180728},
+  text: "Hollingsworth, Ila/Commerce",
+  img: imgCH
+  };
+  var singRoberta = {
+  pos: {lat: 32.717445, lng: -84.010167},
+  text: "Roberta Civic Center, Roberta",
+  img: imgGH
+  };
+  var singCannon = {
+  pos: {lat: 33.7913416, lng: -84.3272657},
+  text: "Cannon Chapel, Emory University, Atlanta",
+  img: imgSH91
+  };
+  var singUWG = {
+  pos:  {lat: 33.572711, lng: -85.105452},
+  text: "Food Service Building, University of West Georgia, Carrollton",
+  img: imgSH91
+  };
+  var singHardeman = {
+  pos:  {lat: 33.7377381, lng: -84.2580474},
+  text: "Hardeman PBC, Decatur",
+  img: imgWB
+  };
+  var singUGA = {
+  pos:  {lat: 33.9020994, lng: -83.3846097},
+  text: "UGA Botanical Garden, Athens",
+  img: imgSocH
+  };
+  var singEmmausThomaston = {
+  pos:  {lat: 32.896908, lng: -84.343773},
+  text: "Emmaus PBC, Thomaston (569t)",
+  img: imgSH91
+  };
+  var singEphesusSchool = {
+  pos:  {lat: 33.4057282, lng: -85.2616872},
+  text: "Ephesus Elementary School, Ephesus",
+  img: imgSH91
+  };
+  var singHobokenSchool = {
+  pos:  {lat: 31.1863876, lng: -82.1329306},
+  text: "Hoboken Elementary School, Hoboken",
+  img: imgCB
+  };
+  var singEmmausCarrollton = {
+  pos:  {lat: 33.5168532, lng: -85.0893145},
+  text: "Emmaus PBC, Carrollton",
+  img: imgSH91
+  };
+  var singShiloh = {
+  pos:  {lat: 33.660804, lng: -85.278493},
+  text: "Shiloh PBC, Waco",
+  img: imgSH91
+  };
+  var singUnionPBC = {
+  pos:  {lat: 33.07621259, lng: -84.09338599},
+  text: "Union PBC, Goggans",
+  img: imgSH91
+  };
+  var singOakGrove = {
+  pos:  {lat: 34.1621782, lng: -84.3200181},
+  text: "Oak Grove PBC, Alpharetta",
+  img: imgSH91
+  };
+  var singMtPisgah = {
+  pos:  {lat: 31.421414, lng: -83.879929},
+  text: "Mount Pisgah Church, Sylvester",
+  img: imgSH91
+  };
+  var singAugusta = {
+  pos:  {lat: 33.5195821, lng: -82.0852411},
+  text: "Augusta Old Line PBC, Martinez",
+  img: imgSH91
+  };
+  var singOakhurst = {
+  pos:  {lat: 33.763079, lng: -84.3129086},
+  text: "Oakhurst Baptist, Decatur",
+  img: imgSH91
+  };
+  var singHollySprings = {
+  pos: {lat: 33.683490, lng: -85.150341},
+  text: "Holly Springs PBC, Bremen (453)",
+  img: imgSH91
+  };
+  var singAlpharetta = {
+  pos:  {lat: 34.0747482, lng: -84.2944774},
+  text: "Alpharetta City Hall, Alpharetta",
+  img: imgSH91
+  };
+  var singBlueRidge = {
+  pos:  {lat: 34.7863636, lng: -84.7636499},
+  text: "Blue Ridge PBC, Chatsworth",
+  img: imgCH
+  };
+  var singHopewell = {
+  pos:  {lat: 33.401821, lng: -85.220497},
+  text: "Hopewell PBC, Ephesus",
+  img: imgSH91
+  };
+  var singCrossRoads = {
+  pos:  {lat: 33.863252, lng: -85.343170},
+  text: "Cross Roads Baptist Church, Tallapoosa",
+  img: imgSH91
+  };
+  var singFlatShoals = {
+  pos:  {lat: 33.6062425, lng: -84.178152},
+  text: "Flat Shoals PBC, Stockbridge",
+  img: imgSH91
+  };
+  var singSpivey = {
+  pos:  {lat: 33.5931349, lng: -84.3314133},
+  text: "Spivey Hall, Clayton State University, Morrow",
+  img: imgSH91
+  };
+  var singMtZion = {
+  pos:  {lat: 33.6361374, lng: -85.1885427},
+  text: "Mount Zion UMC, Mt. Zion",
+  img: imgSH91
+  };
+  var singWilsonsChapel = {
+  pos:  {lat: 33.557058, lng: -84.966422},
+  text: "Wilson's Chapel, Carrollton",
+  img: imgSH91
+  };
+  var singRomeMidway = {
+  pos:  {lat: 34.379148, lng: -85.174968},
+  text: "Rome Midway PBC, Rome",
+  img: imgSH91
+  };
+  var singCedarCreek = {
+  pos:  {lat: 31.8733923, lng: -83.91287},
+  text: "Cedar Creek Church, Cordele",
+  img: imgSH91
+  };
+  var singTickanetly = {
+  pos:  {lat: 34.6489717, lng: -84.2932607},
+  text: "Tickanetly PBC, Ellijay",
+  img: imgCH
+  };
+  var singHaynesCreek = {
+  pos:  {lat: 33.8245566, lng: -83.9634861},
+  text: "Haynes Creek Church, Loganville (466)",
+  img: imgSH91
+  };
+  var singLibertyHill = {
+  pos: {lat: 33.152612, lng: -84.135991},
+  text: "Liberty Hill Church, Lamar County",
+  img: imgSH91
+  };
+  var singSavannah = {
+  pos: {lat: 31.9421955, lng: -81.0591447},
+  text: "Skidaway Island Presbyterian, Savannah",
+  img: imgSH91
+  };
+  var singAndrewsChapel = {
+  pos:  {lat: 32.9020652, lng: -84.23045},
+  text: "Andrews Chapel, Thomaston",
+  img: imgSH91
+  };
+  var singEmoryPres = {
+  pos: {lat: 33.7927516, lng: -84.316703},
+  text: "Emory Presbyterian, Atlanta",
+  img: imgSH91
+  };
+  var singCoweta = {
+  pos:  {lat: 33.3752802, lng: -84.8005215},
+  text: "Coweta County Courthouse, Newnan",
+  img: imgSH91
+  };
+  var singBigCreek = {
+  pos:  {lat: 34.0589922, lng: -84.2307202},
+  text: "Big Creek PBC, Alpharetta (494)",
+  img: imgSH91
+  };
+  var singSugarValley = {
+  pos:  {lat: 34.5745825, lng:-85.0257913},
+  text: "Historic Sugar Valley Baptist Church, Calhoun",
+  img: imgSH91
+  };
+  var singStJohnWonderworker = {
+  pos:  {lat: 33.7398676, lng: -84.376078},
+  text: "St. John the Wonderworker, Atlanta",
+  img: imgSH91
+  };
+  var singOurSaviour = {
+  pos: {lat: 33.783743, lng: -84.3571662},
+  text: "Church of Our Saviour, Atlanta",
+  img: imgSH91
+  };
+  var singMarsHill = {
+  pos: {lat: 31.1943152, lng: -82.1567476},
+  text: "Mars Hill PBC, Hoboken",
+  img: imgCB
+  };
+  var singings = [
+      singIla,
+      singRoberta,
+      singCannon,
+      singUWG,
+      singHardeman,
+      
+      singUGA,
+      singEmmausThomaston,
+      singEphesusSchool,
+      singHobokenSchool,
+      singEmmausCarrollton,
+      
+      singShiloh,
+      singUnionPBC,
+      singOakGrove,
+      singMtPisgah,
+      singAugusta,
+      singOakhurst,
+      
+      singHollySprings,
+      singAlpharetta,
+      singBlueRidge,
+      singHopewell,
+      singCrossRoads,
+      singFlatShoals,
+      singSpivey,
+      
+      singMtZion,
+      singWilsonsChapel,
+      singRomeMidway,
+      singCedarCreek,
+      singTickanetly,
+      singHaynesCreek,
+      
+      singLibertyHill,
+      singSavannah,
+      singAndrewsChapel,
+      singEmoryPres,
+      singCoweta,
+      singBigCreek,
+      singSugarValley,
+      
+      singStJohnWonderworker,
+      singOurSaviour,
+      singMarsHill
+  ];
+  
+  var infowindow = new google.maps.InfoWindow;
+  for (var i = 0; i < singings.length; i++) {
+
+      var marker = new google.maps.Marker({position:singings[i].pos, icon:singings[i].img, txt:singings[i].text, map:map});
+      google.maps.event.addListener(marker, 'mousedown',  function() { 
+          infowindow.setContent(this.txt);
+          infowindow.open(map, this);
+      });
+//      google.maps.event.addListener(marker, 'mouseover',  function() { 
+//          infowindow.setContent(this.txt);
+//          infowindow.open(map, this);
+//      });
+//      google.maps.event.addListener(marker, 'mouseout', function() { 
+//          infowindow.close();
+//      });
+  };
+}
+</script>
+<p>Marker color indicates the book used. Some locations use more than one book, but we do not have striped markers.</p>
+<ul><li> Dark red: <i>The Sacred Harp,</i> 1991 edition</li>
+<li>Dark blue: <i>The Sacred Harp</i> Revised Cooper Edition, 2012</li>
+<li>White: <i>The Sacred Harp</i> Fourth Edition with Supplement, compiled by J.L. White (1911)</li>
+<li>Gray: <i>The Christian Harmony</i>, 2010 Edition</li>
+<li>Light blue: <i>The Georgian Harmony</i></li>
+<li>Light green: <i>The Social Harp</i></li></ul>
+
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPFlZ4wxoLRvtZnb05tYkXMqYf-ro0zd4&callback=myMap"></script>
+    <hr align="center" size="1" width="75%">	 
+	<p align="center"><i>Last updated January 4, 2017.  Additions, corrections, comments, or questions?  
+	<a href="mailto:mail@atlantasacredharp.org?subject=Sacred Harp website msg">Send us an email</a></i></p>
+  <br>
+    </TD></TR>
+  </TBODY>
+</TABLE></DIV>
+</BODY></HTML>

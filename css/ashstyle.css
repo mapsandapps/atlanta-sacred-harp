@@ -1,0 +1,254 @@
+body { 
+    font-size: 1.05em;
+    font-family:  "Times New Roman", serif;
+    color: #000;
+    padding:0;
+    margin:0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    background:
+        /* #559230 = rgb(85,146,48); */
+        /* #2B5510 = rgb(43,85,16) */
+        linear-gradient(90deg, #2B5510, #559230, #559230, #2B5510);
+}
+
+
+a {
+    color:  #439c16; /* hsl(100, 75%, 35%) */
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #7fc752; /* hsl(97, 51%, 55%) */
+}
+
+/*
+img {
+    width: 100%;
+}
+*/
+.lf {
+    FLOAT: left; vertical-align: top; MARGIN-RIGHT: 10px; MARGIN-TOP: 5px; width: auto;
+}
+
+.rt {
+    FLOAT: right; vertical-align: top; MARGIN-LEFT: 10px; MARGIN-TOP: 5px; width: auto;
+}
+
+header {
+    background:  #559230; /* hsl(97, 51%, 38%) */
+    width: 100%;
+    height: 4.75rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-top: 0.125rem solid #000000;
+    border-bottom: 0.125rem solid #000000;
+    z-index: 100;
+    /*background: linear-gradient(90deg, rgba(85,146,48,0.5), rgba(85,146,48,1), rgba(85,146,48,1)), url('../images/staff.png') no-repeat 1.25rem;*/
+}
+
+
+nav {
+    font-family: "Helvetica", "Arial",  sans-serif;
+    float: right;
+    padding-right: 1.25rem;
+    /* to keep it over the body text, remove float and add properties below */
+    /*
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 64rem;
+    */
+    background: #559230;
+}
+nav ul {
+    list-style: none;
+    margin: 1.25rem 0;
+    padding: 0;
+}
+
+nav ul li {
+    float: left;
+    position: relative;
+    word-wrap: break-word;
+    text-align: center;
+    max-width: 6.6rem;
+    margin: 0.125rem;
+}
+
+nav ul li a {
+    display: block;
+    padding: 0 0.25rem;
+    line-height: 1.25rem;
+    font-size: 1.0rem;
+    color: #000000;
+    text-decoration: none;
+}
+
+.nav-mobile{
+    position: absolute;
+    top: 0.25rem;
+    left: 0.75rem;
+    background: #559230;
+    height: 3.75rem;
+    width: 3.75rem;
+    display: none;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+.current {
+    color: #62401e; /* hsl(30, 53%, 25%) */
+}
+
+section {
+
+    margin: 5rem auto 2rem;
+    position: relative;
+    padding: 1.25rem;
+    max-width: 64rem;
+    background: FloralWhite;
+}
+
+h1 {
+
+    font-size: 2rem;
+    font-family: "Helvetica", "Arial",  sans-serif;
+    color: #000000;
+    margin: 0.67rem 0;
+    font-weight: bold;
+    text-align: center;
+}
+h2 {
+
+    font-size: 1.5rem;
+    font-family: "Helvetica", "Arial",  sans-serif;
+    color: #000000;
+    margin: 0.83rem 0 ;
+    font-weight: bold;
+}
+h3{
+
+    font-size: 1.17rem;
+    font-family: "Helvetica", "Arial",  sans-serif;
+    color: #000000;
+    margin: 1rem 0 ;
+    font-weight: bold;
+}
+h4{
+
+    font-size: 1rem;
+    font-family: "Helvetica", "Arial",  sans-serif;
+    color: #000000;
+    margin: 1.33rem 0 ;
+    font-weight: bold;
+}
+
+p {
+    display: block;
+    margin: 1rem 0;
+}
+
+/* Styling for the calendar page */
+
+#calendar {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 52rem;
+}
+.table_grid {
+    border-collapse: collapse;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    background-color: transparent; 
+    border-color: black;
+    display: inline-table;
+    width: 20rem;  /* half the breakpoint */
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.tr_grid_dark{
+    background-color: #53b123;
+    text-align: center;
+}
+.td_grid {
+    text-align: left;
+}
+.td_grid.sunday {
+    width: 70%;
+}
+.td_grid.date {
+    width: 30%;
+}
+
+
+/*MEDIA QUERY*/
+@media only screen and (max-width : 60rem) {
+
+    header {
+    position: absolute; /* override fixed so it can be scrolled */
+    }
+
+    #nav-toggle {
+        margin-top: 0.625rem;
+        width: 3rem;
+        height: 3rem;
+        display:inline-block;
+    }
+
+    .nav-mobile {
+        display: block;
+
+    }
+
+    nav {
+        width: 100%;
+        padding: 4.75rem 0 0;  /* top padding to put it below the bar with the x */
+        font-family: "Helvetica", "Arial",  sans-serif;
+        float: right;
+
+    }
+    nav ul {
+        display: none;
+        margin: 0;
+        border-top: 0.0625rem solid #000000;
+        border-bottom: 0.0625rem solid #000000;
+    }
+
+    nav ul li {
+        float: none;
+        max-width: 100%;
+        margin: 0;
+        border-top: 0.0625rem solid #000000; /* 2.5rem + .125rem border = 2.625rem */
+        border-bottom: 0.0625rem solid #000000; /* 2.5rem + .125rem border = 2.625rem */
+        word-wrap: none;
+        width: 100%;
+    }
+
+    nav ul li a {
+        line-height: 1.25rem;
+        padding: 0.625rem;  /* 2*0.625rem + 1.25rem line-height = 2.5rem */
+        max-width: 50%;
+        margin: auto;
+    }
+    
+    #menu-icon {
+        height: 3rem;
+        width: 3rem;
+    }
+    #calendar {
+        width: 100%;
+        max-width: 22rem;
+    }
+    .table_grid {
+        width: 100%;
+        margin: 0;
+    }
+
+}
+
+
