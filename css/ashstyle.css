@@ -78,7 +78,7 @@ nav ul li {
   position: relative;
   word-wrap: break-word;
   text-align: center;
-  max-width: 6.6rem;
+  max-width: 6.3rem;
   margin: 1.1rem 0.125rem;
 }
 
@@ -183,6 +183,15 @@ p {
 }
 .td_grid.date {
   width: 30%;
+}
+
+#resources section hr,
+#resources section h2 {
+  margin-top: 3rem;
+}
+
+#resources section li {
+  padding-bottom: 0.4rem;
 }
 
 /*MEDIA QUERY*/
