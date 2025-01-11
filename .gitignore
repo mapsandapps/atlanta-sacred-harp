@@ -1,8 +1,7 @@
+.DS_Store
 .smileys
 .well-known
 cgi-bin
-.htaccess
-.htaccess.bkp
 *.php
 *.php.bak
 temp

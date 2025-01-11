@@ -1,0 +1,22 @@
+.event {
+  text-align: center;
+}
+
+.event img {
+  max-width: 600px;
+  width: 100%;
+}
+
+.button {
+  background-color: #439c16;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  padding: 8px;
+  display: inline-block;
+}
+
+.button:hover {
+  color: white;
+  background-color: #439c16;
+}

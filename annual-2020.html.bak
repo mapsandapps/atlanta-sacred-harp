@@ -2,8 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Note Singing</title>
-    <meta name="description" content="United and Associated Note Singings" />
+    <title>Annual All-Day Sacred Harp Singings in Georgia</title>
+    <meta
+      name="description"
+      content="Annual all-day Sacred Harp and other shape note singings in Georgia, including
+Christian Harmony, Georgian Harmony, Social Harp, and Eclectic Harmony"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/ashstyle.css" />
@@ -17,56 +21,56 @@
           <a id="nav-toggle" href="#!"><img id="menu-icon" src="images/menu-icon.png" /></a>
         </div>
         <ul class="nav-list">
-          <li><a href="/index.html">Welcome</a></li>
-          <li><a href="/beginner.html">What to Expect</a></li>
-          <li><a href="/monthly.html">Upcoming Singings</a></li>
-          <li><a href="/localgroups.html">Local Groups</a></li>
-          <li><a href="/resources.html" class="current">Other Resources</a></li>
+          <li><a href="index.html">Welcome</a></li>
+          <li><a href="beginner.html">What to Expect</a></li>
+          <li><a href="monthly.html">Upcoming Singings</a></li>
+          <li><a href="localgroups.html">Local Groups</a></li>
+          <li><a href="annual.html" class="current">Annual Singings</a></li>
+          <li><a href="notesing.html">Note Singing</a></li>
+          <li><a href="map.html">Map of Singings</a></li>
+          <li><a href="calendar.html">Dates of Sundays</a></li>
         </ul>
       </nav>
     </header>
     <section>
-      <h1>Note Singing</h1>
+      <h1>Annual Singings in Georgia</h1>
 
-      <p><b>This page has not been updated since 2019.</b></p>
       <p>
-        Note singing is a 7-shape gospel tradition that is practiced to this day by Black singers in Georgia. The singing is expressive and the repertoire
-        consists of newer songs and styles than in the <i>Sacred Harp</i> tradition. Singers each carry their collection of books and photocopies to singings.
-        One of the books used is the Church of God <i>Church Hymnal</i> (1951), available from <a href="https://www.redbackhymnal.com/">Pathway Press</a>.
+        <b>This page has not been updated since February 2020. See our <a href="monthly.html">Upcoming Singings</a> page for current information.</b>
       </p>
-      <p>You can get a taste of the style from these videos on YouTube:</p>
-      <ul>
-        <li>
-          <a href="https://www.youtube.com/watch?v=_gT8vo6nCO8">"What a Happy Time"</a>
-        </li>
-        <li>
-          <a href="https://www.youtube.com/watch?v=_gT8vo6nCO8">"Way Up in the Heavenly Land"</a>
-        </li>
-      </ul>
+
       <p>
-        Here is the 2019 schedule for the United Note Singers, the Associated Note Singers, and the Middle Georgia and Griffin Note Singers. You can also find
-        these singings on our <a href="monthly.html">upcoming singings page</a>. Singings are at 2:00 PM unless otherwise noted. Click the link for each singing
-        to open a Google Map to it.
+        Annual singings are the best place to experience Sacred Harp. They might be big or small, old (over 150 years) or new. Most annual singings are all-day
+        singings with dinner at noon. They usually start at 10:00 Eastern (9:30 for big singings) in Georgia or 9:00 Central in Alabama. They end around 2:30 or
+        3:00, after everyone who wants to lead a song has had a turn. Newcomers are always welcome.
       </p>
-      <p>For more information, contact Joyce Hammock, jvhammock -at- yahoo -dot- com</p>
+      <p>
+        The list of Georgia and eastern Alabama singings below is generated from Warren Steel's
+        <a href="http://www.mcsr.olemiss.edu/~mudws/annual.html">annual Sacred Harp directory</a> and
+        <a href="http://home.olemiss.edu/~mudws/charmony.html">annual Christian Harmony directory</a>. Sometimes singings change or are cancelled at the last
+        minute. Detailed up-to-date confirmed information is given each month on our <a href="monthly.html">upcoming singings page</a>.
+
+        <!-- For the dates of Sundays this year, refer to our <a href="calendar.html">calendar page</a>.-->
+      </p>
+
+      <p>Click the link for each singing to open a Google Map to it. Where the book is not noted, the 1991 edition of <i>The Sacred Harp</i> is used.</p>
 
       <div id="singings"></div>
 
       <hr align="center" size="1" width="75%" />
       <p align="center">
         <i
-          >Last updated June 9, 2019.<br />
-          Additions, corrections, comments, or questions?
+          >Updated February 29, 2020. Additions, corrections, comments, or questions?
           <a href="mailto:mail@atlantasacredharp.org?subject=Sacred Harp website msg">Send us an email</a></i
         >
       </p>
     </section>
     <script>
-      var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December", ""];
+      var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
       function populateSingList() {
         // Change this depending on the name of your PHP or XML file
-        downloadUrl("notesings.php", function (data) {
+        downloadUrl("annualsings.php", function (data) {
           var xml = data.responseXML;
           var singList = document.getElementById("singings");
           var markers = xml.documentElement.getElementsByTagName("marker");
@@ -82,8 +86,8 @@
             var lat = markerElem.getAttribute("lat");
             var lng = markerElem.getAttribute("lng");
             var book1 = markerElem.getAttribute("book1");
+            var book2 = markerElem.getAttribute("book2");
             var state = markerElem.getAttribute("state");
-            var notes = markerElem.getAttribute("notes");
 
             if (firstMonth || month != lastMonth) {
               var h3 = document.createElement("h3");
@@ -97,8 +101,7 @@
             }
 
             var li = document.createElement("li");
-            li.textContent = `${day}, ${month} 2019 - `;
-            // li.textContent = day + " - ";
+            li.textContent = day + " - ";
             if (name != "") {
               li.textContent += name + " - ";
             }
@@ -111,14 +114,22 @@
               a.target = "_blank";
               li.appendChild(a);
               var tail = " " + street + ", " + city + " " + state;
-              if (notes != "") {
-                tail += " (" + notes + ")";
-              }
               var tailtext = document.createTextNode(tail);
               li.appendChild(tailtext);
             } else {
               li.textContent += "Location TBA";
             }
+            if (book1 != "") {
+              var book = " (" + book1;
+              if (book2 != "") {
+                book += ", " + book2;
+              }
+              book += ")";
+              var i = document.createElement("i");
+              i.textContent = book;
+              li.appendChild(i);
+            }
+
             ul.appendChild(li);
           });
         });
@@ -142,6 +153,7 @@
 
       window.onload = populateSingList;
     </script>
+
     <script src="js/main.js"></script>
   </body>
 </html>

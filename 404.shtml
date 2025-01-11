@@ -15,13 +15,11 @@
           <a id="nav-toggle" href="#!"><img id="menu-icon" src="images/menu-icon.png" /></a>
         </div>
         <ul class="nav-list">
-          <li><a href="index.html">Welcome</a></li>
-          <li><a href="beginner.html">What to Expect</a></li>
-          <li><a href="monthly.html">Upcoming Singings</a></li>
-          <li><a href="localgroups.html">Local Groups</a></li>
-          <li><a href="annual.html">Annual Singings</a></li>
-          <li><a href="map.html">Map of Singings</a></li>
-          <li><a href="calendar.html">Dates of Sundays</a></li>
+          <li><a href="/index.html">Welcome</a></li>
+          <li><a href="/beginner.html">What to Expect</a></li>
+          <li><a href="/monthly.html">Upcoming Singings</a></li>
+          <li><a href="/localgroups.html">Local Groups</a></li>
+          <li><a href="/resources.html">Other Resources</a></li>
         </ul>
       </nav>
     </header>
