@@ -1,5 +1,8 @@
 RedirectMatch 301 ^/events$ /resources.html
 RedirectMatch 301 ^/events/$ /resources.html
+Redirect 301 "/annual_old.html" "/monthly.html"
+Redirect 301 "/localgroups2020.html" "/localgroups.html"
+Redirect 301 "/map1.html" "/map.html"
 
 # php -- BEGIN cPanel-generated handler, do not edit
 # Set the “ea-php74” package as the default “PHP” programming language.
