@@ -207,6 +207,55 @@ figcaption {
   text-align: center;
 }
 
+.book {
+  border-radius: 12px;
+  padding: 2px 8px;
+  white-space: nowrap;
+  line-height: 28px;
+  text-decoration: none;
+  font-weight: unset;
+}
+
+.book.denson {
+  background: rgb(117, 56, 0);
+  color: rgb(255, 200, 170);
+}
+
+.book.cooper {
+  background-color: rgb(10, 83, 168);
+  color: rgb(191, 224, 246);
+}
+
+.book.shh {
+  background-color: rgb(255, 229, 160);
+  color: rgb(71, 56, 33);
+}
+
+.book.wb {
+  background-color: rgb(230, 230, 230);
+  color: rgb(61, 61, 61);
+}
+
+.book.sch {
+  background-color: rgb(212, 237, 188);
+  color: rgb(17, 115, 75);
+}
+
+.book.gh {
+  background-color: rgb(186, 201, 229);
+  color: rgb(19, 29, 56);
+}
+
+.book.ch {
+  background-color: rgb(61, 61, 61);
+  color: rgb(229, 229, 229);
+}
+
+.spacer {
+  display: block;
+  height: 80px;
+}
+
 /*MEDIA QUERY*/
 @media only screen and (max-width: 60rem) {
   header {

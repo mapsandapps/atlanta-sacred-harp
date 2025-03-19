@@ -1,0 +1,43 @@
+.annual-table {
+  display: grid;
+  grid-template-columns: 6fr 4fr 2fr 2fr;
+  gap: 16px;
+  row-gap: 12px;
+}
+
+.annual-table .header {
+  display: block;
+  font-weight: 700;
+  text-align: center;
+}
+
+.annual-table hr {
+  grid-column: span 4;
+  width: 100%;
+  border: 1px solid #efcc8d;
+  border-width: 1px 0 0 0;
+  margin-top: 4px;
+}
+
+.annual-table .books {
+  margin-top: -4px;
+}
+
+@media only screen and (max-width: 40rem) {
+  .annual-table {
+    grid-template-columns: 1fr;
+    row-gap: 4px;
+  }
+
+  .annual-table .header {
+    display: none;
+  }
+
+  .annual-table hr {
+    grid-column: span 1;
+  }
+
+  .annual-table .singing {
+    font-weight: bold;
+  }
+}
