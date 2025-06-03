@@ -199,7 +199,8 @@ p {
 }
 
 #campairportshuttle section li,
-#campairportshuttle section p {
+#campairportshuttle section p,
+#campairportshuttle section img {
   padding-bottom: 1.5rem;
 }
 
