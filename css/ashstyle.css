@@ -194,7 +194,8 @@ p {
   padding-bottom: 0.4rem;
 }
 
-#campairportshuttle {
+#campairportshuttle p,
+#campairportshuttle li {
   line-height: 1.5rem;
 }
 

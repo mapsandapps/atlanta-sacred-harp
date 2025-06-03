@@ -15,7 +15,7 @@
     <meta property="og:image:height" content="1972" />
     <meta property="og:image:alt" content="Singing school flyer" />
     <meta property="og:url" content="https://atlantasacredharp.org" />
-    <link rel="stylesheet" href="css/ashstyle.css" />
+    <link rel="stylesheet" href="/css/ashstyle.css" />
     <!--[if IE]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   </head>
 </html>
