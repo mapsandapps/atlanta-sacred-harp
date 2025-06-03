@@ -194,6 +194,15 @@ p {
   padding-bottom: 0.4rem;
 }
 
+#campairportshuttle {
+  line-height: 1.5rem;
+}
+
+#campairportshuttle section li,
+#campairportshuttle section p {
+  padding-bottom: 1.5rem;
+}
+
 figure {
   display: flex;
   flex-flow: column;
