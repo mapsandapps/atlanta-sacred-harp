@@ -21,6 +21,10 @@ a:hover {
   color: #7fc752; /* hsl(97, 51%, 55%) */
 }
 
+section a:visited {
+  color: #5e854a;
+}
+
 /*
 img {
     width: 100%;
@@ -265,6 +269,10 @@ figcaption {
 .spacer {
   display: block;
   height: 80px;
+}
+
+.text-center {
+  text-align: center;
 }
 
 /*MEDIA QUERY*/

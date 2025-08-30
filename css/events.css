@@ -19,14 +19,25 @@ img {
   text-align: center;
 }
 
-.singing-school h2 {
+.singing-school h2,
+.united-convention h2 {
   margin-top: 2.33rem;
 }
 
-.singing-school {
+.singing-school,
+.united-convention {
   margin-top: 2rem;
 }
 
 .singing-school-notice {
   margin-top: 7rem;
+}
+
+.united-convention img {
+  padding: 32px 0px;
+}
+
+.united-convention .intro {
+  text-align: center;
+  font-size: 1.5em;
 }
