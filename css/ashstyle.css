@@ -236,6 +236,11 @@ figcaption {
   color: rgb(255, 200, 170);
 }
 
+.book.mcgraw {
+  background-color: #4b5f5d;
+  color: #fdf7b6;
+}
+
 .book.cooper {
   background-color: rgb(10, 83, 168);
   color: rgb(191, 224, 246);
