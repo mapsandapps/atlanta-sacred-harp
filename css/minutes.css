@@ -43,7 +43,7 @@
   details {
     padding: 0.5rem 0.5rem 0;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 2rem auto 0;
   }
 
   summary {
@@ -64,5 +64,14 @@
 
   details[open] summary {
     margin-bottom: 0.5rem;
+  }
+
+  .move-to-right {
+    display: flex;
+    justify-content: flex-end;
+
+    p {
+      text-align: left;
+    }
   }
 }
