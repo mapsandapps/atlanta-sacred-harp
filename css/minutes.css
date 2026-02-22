@@ -40,6 +40,11 @@
     padding: 1rem;
   }
 
+  .light-note {
+    background-color: #f0dab1;
+    padding: 1rem;
+  }
+
   details {
     padding: 0.5rem 0.5rem 0;
     max-width: 600px;
