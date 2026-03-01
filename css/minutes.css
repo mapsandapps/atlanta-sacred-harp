@@ -16,6 +16,10 @@
     margin-bottom: 0.6rem;
   }
 
+  span[title] {
+    border-bottom: 1px dotted black;
+  }
+
   .larger {
     font-size: 1.4rem;
   }
@@ -78,6 +82,7 @@
 
     p {
       text-align: left;
+      min-width: min(300px, 100%);
     }
   }
 
