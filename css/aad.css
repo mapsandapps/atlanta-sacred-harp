@@ -22,3 +22,7 @@ img {
 img.old-stone-church {
   max-width: 524px;
 }
+
+.align-left {
+  text-align: left;
+}
