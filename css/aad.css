@@ -26,3 +26,7 @@ img.old-stone-church {
 .align-left {
   text-align: left;
 }
+
+p.padding-bottom {
+  padding-bottom: 1.4rem;
+}
