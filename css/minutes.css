@@ -89,4 +89,8 @@
   .align-right {
     text-align: right;
   }
+
+  .missing {
+    opacity: 0.5;
+  }
 }
