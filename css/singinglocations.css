@@ -1,14 +1,11 @@
-h1 {
-  padding-bottom: 2rem;
-}
-
 h2 {
+  padding-top: 6rem;
   text-align: center;
 }
 
 .table {
   display: grid;
-  grid-template-columns: 12rem 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 16px;
   row-gap: 12px;
 }
@@ -25,6 +22,10 @@ h2 {
   border: 1px solid #efcc8d;
   border-width: 1px 0 0 0;
   margin-top: 4px;
+}
+
+.note {
+  background-color: #efcc8d;
 }
 
 @media only screen and (max-width: 40rem) {
