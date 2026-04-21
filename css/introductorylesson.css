@@ -1,0 +1,80 @@
+.lessons-summary-table {
+  display: grid;
+  grid-template-columns: 48px 2fr 3fr;
+}
+
+.lessons-summary-table .header {
+  display: block;
+  font-weight: 700;
+}
+
+.lessons-summary-table hr {
+  grid-column: span 3;
+}
+
+hr {
+  width: 100%;
+  border: 1px solid #efcc8d;
+  border-width: 1px 0 0 0;
+  margin-top: 4px;
+}
+
+.lessons-summary-table .row-note {
+  padding-top: 1rem;
+  display: block;
+  grid-column: 1 / -1;
+}
+
+.move-to-right {
+  display: flex;
+  justify-content: flex-end;
+
+  p {
+    text-align: left;
+    min-width: min(240px, 100%);
+  }
+}
+
+.narrow {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+h2 {
+  margin-top: 4rem;
+  line-height: 2rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+figure {
+  margin: 4rem 0;
+}
+
+figcaption {
+  background-color: green;
+}
+
+.container {
+  margin-bottom: 4rem;
+}
+
+span[title] {
+  border-bottom: 1px dotted black;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
+}
+
+table {
+  margin: 0 auto;
+}
