@@ -28,6 +28,16 @@ h2 {
   background-color: #efcc8d;
 }
 
+.move-to-right {
+  display: flex;
+  justify-content: flex-end;
+
+  p {
+    text-align: left;
+    min-width: min(300px, 100%);
+  }
+}
+
 @media only screen and (max-width: 40rem) {
   .table {
     grid-template-columns: 1fr;
